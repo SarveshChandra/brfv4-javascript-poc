@@ -43,7 +43,7 @@
 			//r&d
 			console.log(face.vertices);
 			for(var i=0; i<68; i++) {
-				document.getElementById("vertices-" + i).innerHTML = "<br><br>v" + (i+1) + "<br>x: " + face.vertices[i] + "<br>y: " + face.vertices[i+1];
+				document.getElementById("vertices-" + i).innerHTML = "<br><br>v" + (i) + "<br>x: " + face.vertices[i] + "<br>y: " + face.vertices[i+1];
 			}
 			//document.getElementById("vertices").innerHTML = face.vertices;
 
