@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+	#_brfv4_logo, #_settingsRight {
+		display: none;
+	}
+	td {
+		padding-right: 20px;
+		vertical-align: super;
+	}
+</style>
+<head>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/brfv4_examples_theme.css">
+	<title>Beyond Reality Face - BRFv4 - HTML5/Javascript face tracking</title>
+
+	<!--<script src="js/libs/createjs/preloadjs-0.6.2.min.js"></script>-->
+	<script src="js/libs/createjs/preloadjs.min.js"></script>
+	<script src="js/BRFv4Demo.js"></script>
+
+	<script>
+		//changed for r&d
+		console.log("FILE is index.html");
+
+		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!--changed for r&d-->
+	<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5620419-18"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-5620419-18');
+	</script>-->
+
+</head>
+
+<body>
+
+<div id="_wrapper">
+
+	<div id="_content">
+		<video  id="_webcam" playsinline></video>
+		<canvas id="_imageData"></canvas>
+		<canvas id="_faceSub"></canvas>
+		<canvas id="_t3d"></canvas>
+		<canvas id="_f3d"></canvas>
+		<canvas id="_drawing"></canvas>
+		<div id="_stats"></div>
+		<div id="_progressBar"></div>
+		<a href="http://www.tastenkunst.com" target="_blank">
+			<img id="_brfv4_logo" src="assets/brfv4_logo.png" alt="BRFv4 Logo"/>
+		</a>
+	</div>
+
+	<!-- r&d -->
+	<!--<button onclick="captureFaceData()" style="padding: 10px;">Capture</button>-->
+
+	<!--<div id="_subline"></div>
+	<div id="_highlight"><pre><code class="javascript" id="_gist"></code></pre></div>-->
+
+</div>
+
+<!-- r&d -->
+<img src="brfv4_landmarks.jpg" style="margin-top: 480px;" width="500px" />
+<table>
+	<tr>
+		<td rowspan="33%">
+			<div id="vertices-0"></div>
+			<div id="vertices-1"></div>
+			<div id="vertices-2"></div>
+			<div id="vertices-3"></div>
+			<div id="vertices-4"></div>
+			<div id="vertices-5"></div>
+			<div id="vertices-6"></div>
+			<div id="vertices-7"></div>
+			<div id="vertices-8"></div>
+			<div id="vertices-9"></div>
+			<div id="vertices-10"></div>
+			<div id="vertices-11"></div>
+			<div id="vertices-12"></div>
+			<div id="vertices-13"></div>
+			<div id="vertices-14"></div>
+			<div id="vertices-15"></div>
+			<div id="vertices-16"></div>
+			<div id="vertices-17"></div>
+			<div id="vertices-18"></div>
+			<div id="vertices-19"></div>
+			<div id="vertices-20"></div>
+			<div id="vertices-21"></div>
+			<div id="vertices-22"></div>
+		</td>
+		<td rowspan="33%">
+			<div id="vertices-23"></div>
+			<div id="vertices-24"></div>
+			<div id="vertices-25"></div>
+			<div id="vertices-26"></div>
+			<div id="vertices-27"></div>
+			<div id="vertices-28"></div>
+			<div id="vertices-29"></div>
+			<div id="vertices-30"></div>
+			<div id="vertices-31"></div>
+			<div id="vertices-32"></div>
+			<div id="vertices-33"></div>
+			<div id="vertices-34"></div>
+			<div id="vertices-35"></div>
+			<div id="vertices-36"></div>
+			<div id="vertices-37"></div>
+			<div id="vertices-38"></div>
+			<div id="vertices-39"></div>
+			<div id="vertices-40"></div>
+			<div id="vertices-41"></div>
+			<div id="vertices-42"></div>
+			<div id="vertices-43"></div>
+			<div id="vertices-44"></div>
+			<div id="vertices-45"></div>
+		</td>
+		<td rowspan="33%">
+			<div id="vertices-46"></div>
+			<div id="vertices-47"></div>
+			<div id="vertices-48"></div>
+			<div id="vertices-49"></div>
+			<div id="vertices-50"></div>
+			<div id="vertices-51"></div>
+			<div id="vertices-52"></div>
+			<div id="vertices-53"></div>
+			<div id="vertices-54"></div>
+			<div id="vertices-55"></div>
+			<div id="vertices-56"></div>
+			<div id="vertices-57"></div>
+			<div id="vertices-58"></div>
+			<div id="vertices-59"></div>
+			<div id="vertices-60"></div>
+			<div id="vertices-61"></div>
+			<div id="vertices-62"></div>
+			<div id="vertices-63"></div>
+			<div id="vertices-64"></div>
+			<div id="vertices-65"></div>
+			<div id="vertices-66"></div>
+			<div id="vertices-67"></div>
+		</td>
+	</tr>
+</table>
+
+<!--<div id="_settingsRight"></div>-->
+
+</body>
+
+</html>
