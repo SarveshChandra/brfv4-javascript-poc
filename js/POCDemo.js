@@ -1,11 +1,6 @@
-//
-// Namespace: brfv4Example structures these examples.
-//
-//changed for r&d
-console.log("FILE is js/BRFv4Demo.js");
 var brfv4Example = {
 
-	appId: "com.tastenkunst.brfv4.js.examples", // Choose your own app id. 8 chars minimum.
+	appId: "com.sarvesh.facemeasurement", // Choose your own app id. 8 chars minimum.
 
 	loader: { queuePreloader: null },	// preloading/example loading
 	imageData: {						// image data source handling
@@ -22,7 +17,7 @@ var brfv4Example = {
 	stats: {}							// fps meter
 };
 
-var brfv4BaseURL = "js/libs/brf_wasm/";
+var brfv4BaseURL = "js/libs/poc_wasm/";
 
 (function() {
 
@@ -46,15 +41,11 @@ var brfv4BaseURL = "js/libs/brf_wasm/";
 		}
 	}
 
-	if (!support) { brfv4BaseURL = "js/libs/brf_asmjs/"; }
+	if (!support) { brfv4BaseURL = "js/libs/poc_asmjs/"; }
 
 	console.log("Checking support of WebAssembly: " + support + " " + (support ? "loading WASM (not ASM)." : "loading ASM (not WASM)."));
 
 })();
-
-//
-// Namespace: brfv4 is the (mandatory) namespace for the BRFv4 library.
-//
 
 var brfv4 = {locateFile: function(fileName) { return brfv4BaseURL + fileName; }};
 
@@ -66,7 +57,7 @@ brfv4Example.start = function() {
 
 	brfv4Example.loader.preload([
 
-		brfv4BaseURL + "BRFv4_JS_TK190218_v4.0.5_trial.js",						// BRFv4 SDK
+		brfv4BaseURL + "BRFv4_JS_TK190218_v4.0.5_trial.js",		
 
 		"https://webrtc.github.io/adapter/adapter-latest.js",	// webcam polyfill for older browsers
 
@@ -116,7 +107,7 @@ brfv4Example.trace = function(msg, error) {
 	if(typeof window !== 'undefined' && window.console) {
 		var now = (window.performance.now() / 1000).toFixed(3);
 		if(error) {	window.console.error(now + ': ', msg); }
-		else { window.console.log(now + ': ', msg); }
+		else { /*window.console.log(now + ': ', msg);*/ }
 	}
 };
 

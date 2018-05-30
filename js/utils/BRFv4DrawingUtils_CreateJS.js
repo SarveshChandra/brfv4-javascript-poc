@@ -5,7 +5,7 @@
 (function() {
 	"use strict";
 	//r&d
-	console.log("FILE is js/utils/BRFv4DrawingUtils_CreateJS.js");
+	//console.log("FILE is js/utils/BRFv4DrawingUtils_CreateJS.js");
 
 	var drawing			= brfv4Example.drawing;
 

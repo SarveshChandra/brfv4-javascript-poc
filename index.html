@@ -1,9 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
 <style>
-	#_brfv4_logo, #_settingsRight {
-		display: none;
-	}
 	td {
 		padding-right: 20px;
 		vertical-align: super;
@@ -13,7 +9,7 @@
 
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" type="text/css" href="css/brfv4_examples_theme.css">
+	<link rel="stylesheet" type="text/css" href="css/poc.css">
 	<title>POC</title>
 
 	<!--<script src="js/libs/createjs/preloadjs-0.6.2.min.js"></script>-->
@@ -21,21 +17,8 @@
 	<script src="js/POCDemo.js"></script>
 
 	<script>
-		//changed for r&d
-		console.log("FILE is index.html");
-
-		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
+		window.onload = brfv4Example.start;
 	</script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!--changed for r&d-->
-	<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5620419-18"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-5620419-18');
-	</script>-->
 
 </head>
 
@@ -52,9 +35,6 @@
 		<canvas id="_drawing"></canvas>
 		<div id="_stats"></div>
 		<div id="_progressBar"></div>
-		<a href="http://www.tastenkunst.com" target="_blank">
-			<img id="_brfv4_logo" src="assets/brfv4_logo.png" alt="BRFv4 Logo"/>
-		</a>
 	</div>
 
 	<!-- r&d -->
@@ -66,7 +46,19 @@
 </div>
 
 <!-- r&d -->
-<img src="brfv4_landmarks.jpg" style="margin-top: 480px;" width="500px" />
+<img src="face_vertices.jpg" style="margin-top: 480px;" width="500px" />
+<div >
+	<span>Distance Between Point 39 and Point 42 is (Nose in CM)</span>
+	<span id="nose"></span>
+</div>
+<div >
+	<span>Distance Between Point 0 and Point 36 is (left side in CM)</span>
+	<span id="left"></span>
+</div>
+<div >
+	<span>Distance Between Point 16 and Point 45 is (right side in CM)</span>
+	<span id="right"></span>
+</div>
 <table>
 	<tr>
 		<td rowspan="33%">
@@ -145,8 +137,6 @@
 		</td>
 	</tr>
 </table>
-
-<!--<div id="_settingsRight"></div>-->
 
 </body>
 
