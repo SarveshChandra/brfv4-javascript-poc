@@ -70,21 +70,21 @@ brfv4Example.start = function() {
 		"js/libs/createjs/easeljs.min.js",						// canvas drawing lib
 		"js/libs/threejs/three.min.js",							// ThreeJS: a 3D engine
 
-		"js/utils/BRFv4DOMUtils.js",							// DOM handling
-		"js/utils/BRFv4Stats.js",								// FPS meter
+		"js/utils/POCDOMUtils.js",							// DOM handling
+		"js/utils/POCStats.js",								// FPS meter
 
-		"js/utils/BRFv4DrawingUtils_CreateJS.js",				// BRF result drawing
-		"js/utils/BRFv4Drawing3DUtils_ThreeJS.js",				// ThreeJS 3d object placement.
+		"js/utils/POCDrawingUtils_CreateJS.js",				// BRF result drawing
+		"js/utils/POCDrawing3DUtils_ThreeJS.js",				// ThreeJS 3d object placement.
 
-		"js/utils/BRFv4SetupWebcam.js",							// webcam handling
-		"js/utils/BRFv4SetupPicture.js",						// picture/image handling
-		"js/utils/BRFv4SetupExample.js",						// overall example setup
+		"js/utils/POCSetupWebcam.js",							// webcam handling
+		"js/utils/POCSetupPicture.js",						// picture/image handling
+		"js/utils/POCSetupExample.js",						// overall example setup
 
-		"js/utils/BRFv4PointUtils.js",							// some calculation helpers
+		"js/utils/POCPointUtils.js",							// some calculation helpers
 
-		"js/utils/BRFv4SetupChooser.js",						// gui: choose either webcam or picture
-		"js/utils/BRFv4ExampleChooser.js",						// gui: choose an example
-		"js/utils/BRFv4DownloadChooser.js",						// gui: choose which package to download
+		"js/utils/POCSetupChooser.js",						// gui: choose either webcam or picture
+		"js/utils/POCExampleChooser.js",						// gui: choose an example
+		"js/utils/POCDownloadChooser.js",						// gui: choose which package to download
 
 		// example to load on startup, others can be chosen via the example chooser GUI.
 
