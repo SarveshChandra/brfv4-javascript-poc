@@ -105,7 +105,7 @@
 
 			document.getElementById("nose").innerHTML=cmValForNose;
 			document.getElementById("left").innerHTML=cmValForLeft;
-			document.getElementById("right").innerHTML=cmValForRight;
+			document.getElementById("right").innerHTML=cmValForLeft;
 
 		}
 		
