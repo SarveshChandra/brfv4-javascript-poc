@@ -18,11 +18,11 @@
 
 		QuickSettings.useExtStyleSheet();
 
-		brfv4Example.gui.setupChooser = QuickSettings.create(
+		/*brfv4Example.gui.setupChooser = QuickSettings.create(
 			2, 115, "Setup Chooser", brfv4Example.dom.createDiv("_settingsRight"))
 			.setWidth(250)
 			.addHTML("Switch between setups", "Choose either webcam or loaded picture.<br/><br/>For webcam make sure you opened the https:// URL, otherwise it may not start in Chrome.")
 			.addDropDown("_setup", labels, onSetupChosen)
-			.hideTitle("_setup").hideTitle("Switch between setups");
+			.hideTitle("_setup").hideTitle("Switch between setups");*/
 	}
 })();
