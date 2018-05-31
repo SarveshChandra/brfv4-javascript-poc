@@ -74,17 +74,17 @@
 					var y6=face.vertices[i+1];
 				}
 				
-				var leftSidePoints = Math.sqrt( x1*x2 + y1*y2 );
+				var leftSidePoints = Math.sqrt( ((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2)) );
 				//console.log("leftSidePoints distance",leftSidePoints);
 				var cmValForLeft = 2.54*leftSidePoints/dpi;
 				//console.log(cmValForLeft);
 
-				var rightSidePoints = Math.sqrt( x3*x4 + y3*y4 );
+				var rightSidePoints = Math.sqrt( ((x3-x4)*(x3-x4)) + ((y3-y4)*(y3-y4)) );
 				//console.log("rightSidePoints distance",rightSidePoints);
 				var cmValForRight = 2.54*rightSidePoints/dpi;
 				//console.log(cmValForRight);
 
-				var nosePoints = Math.sqrt( x5*x6 + y5*y6 );
+				var nosePoints = Math.sqrt( ((x5-x6)*(x5-x6)) + ((y5-y6)*(y5-y6)) );
 				//console.log("nosePoints",nosePoints);
 				var cmValForNose = 2.54*nosePoints/dpi;
 				//console.log(cmValForNose); 
