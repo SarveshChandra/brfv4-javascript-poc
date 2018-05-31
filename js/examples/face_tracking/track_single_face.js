@@ -47,52 +47,10 @@
 			//r&d
 			console.log(face.vertices);
 			for(var i=0; i<68; i++) {
+
 				document.getElementById("vertices-" + i).innerHTML = "<br><br>v" + (i) + "<br>x: " + face.vertices[i] + "<br>y: " + face.vertices[i+1];
 
-				if(i==0){
-					var x1=face.vertices[i];
-					var y1=face.vertices[i+1];
-				}
-				if(i==36){
-					var x2=face.vertices[i];
-					var y2=face.vertices[i+1];
-				}
-				if(i==16){
-					var x3=face.vertices[i];
-					var y3=face.vertices[i+1];
-				}
-				if(i==45){
-					var x4=face.vertices[i];
-					var y4=face.vertices[i+1];
-				}
-				if(i==39){
-					var x5=face.vertices[i];
-					var y5=face.vertices[i+1];
-				}	
-				if(i==42){
-					var x6=face.vertices[i];
-					var y6=face.vertices[i+1];
-				}
-				
-				var leftSidePoints = Math.sqrt( ((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2)) );
-				//console.log("leftSidePoints distance",leftSidePoints);
-				var cmValForLeft = 2.54*leftSidePoints/dpi;
-				//console.log(cmValForLeft);
-
-				var rightSidePoints = Math.sqrt( ((x3-x4)*(x3-x4)) + ((y3-y4)*(y3-y4)) );
-				//console.log("rightSidePoints distance",rightSidePoints);
-				var cmValForRight = 2.54*rightSidePoints/dpi;
-				//console.log(cmValForRight);
-
-				var nosePoints = Math.sqrt( ((x5-x6)*(x5-x6)) + ((y5-y6)*(y5-y6)) );
-				//console.log("nosePoints",nosePoints);
-				var cmValForNose = 2.54*nosePoints/dpi;
-				//console.log(cmValForNose); 
-				
 			}
-			document.getElementById("nose").innerHTML=cmValForNose;
-			document.getElementById("left").innerHTML=cmValForLeft;
-			document.getElementById("right").innerHTML=cmValForLeft;
 
 			if(		face.state === brfv4.BRFState.FACE_TRACKING_START ||
 					face.state === brfv4.BRFState.FACE_TRACKING) {
@@ -103,11 +61,57 @@
 				draw.drawVertices(	face.vertices, 2.0, false, 0x00a0ff, 0.4);
 
 			}
+
+			
+			//r&d (distance)
+			var x1=face.vertices[0];
+			var y1=face.vertices[1];
+			
+			
+			var x2=face.vertices[36];
+			var y2=face.vertices[37];
+			
+			
+			var x3=face.vertices[16];
+			var y3=face.vertices[17];
+			
+			
+			var x4=face.vertices[44];
+			var y4=face.vertices[45];
+			
+			
+			var x5=face.vertices[38];
+			var y5=face.vertices[39];
+			
+
+			var x6=face.vertices[42];
+			var y6=face.vertices[43];
+
+			
+			var leftSidePoints = Math.sqrt( ((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2)) );
+			//console.log("leftSidePoints distance",leftSidePoints);
+			var cmValForLeft = 2.54*leftSidePoints/dpi;
+			//console.log(cmValForLeft);
+
+			var rightSidePoints = Math.sqrt( ((x3-x4)*(x3-x4)) + ((y3-y4)*(y3-y4)) );
+			//console.log("rightSidePoints distance",rightSidePoints);
+			var cmValForRight = 2.54*rightSidePoints/dpi;
+			//console.log(cmValForRight);
+
+			var nosePoints = Math.sqrt( ((x5-x6)*(x5-x6)) + ((y5-y6)*(y5-y6)) );
+			//console.log("nosePoints",nosePoints);
+			var cmValForNose = 2.54*nosePoints/dpi;
+			//console.log(cmValForNose);
+
+			document.getElementById("nose").innerHTML=cmValForNose;
+			document.getElementById("left").innerHTML=cmValForLeft;
+			document.getElementById("right").innerHTML=cmValForLeft;
+
 		}
 		
 	};
 
-	brfv4Example.dom.updateHeadline("BRFv4 - basic - face tracking - track single face\n" +
+	brfv4Example.dom.updateHeadline("Face tracking - track single face\n" +
 		"Detect and track one face and draw the 68 facial landmarks.");
 
 	brfv4Example.dom.updateCodeSnippet(exampleCode + "");
